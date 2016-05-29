@@ -1,0 +1,34 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>OSMC contralizer</h1>
+    <p class="lead">Provides links to different webpages hosted on this server.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>System status</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th width="33%"></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><p> System:</p></td><td><p>{{ si_system }}</p></td></tr>
+                <tr><td><p> Platform:</p></td><td><p>{{ si_platform }}</p></td></tr>
+                <tr><td><p> Machine:</p></td><td><p>{{ si_machine }}</p></td></tr>
+                <tr><td><p> Processor:</p></td><td><p>{{ si_processor }}</p></td></tr>
+                <tr><td><p> Average load:</p></td><td><p>{{ si_cpu_load }}</p></td></tr>
+                <tr><td><p> Total memory:</p></td><td><p>{{ si_memory_total }}</p></td></tr>
+                <tr><td><p> Free memory:</p></td><td><p>{{ si_memory_free }}</p></td></tr>
+            </tbody>
+        </table>
+        <p><a class="btn btn-default" href="http://www.djangobook.com/en/2.0/index.html">More info &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}
